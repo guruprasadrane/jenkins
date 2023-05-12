@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-    def output = ''
     stage('Read YAML') {
+      def output = ''
       steps {
         script {
           // Read the yaml file from the workspace
