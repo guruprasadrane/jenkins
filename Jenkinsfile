@@ -7,13 +7,13 @@ pipeline {
           // Read the yaml file from the workspace
           def yaml = readYaml file: 'manifest.yml'
           // Check if the yaml object has a key called 'items'
-          if (yaml.plugin_name) {
+          if (yaml.plugin_name.strings) {
             // Loop through the items array and print each element
-            for (item in yaml.plugin_name) {
+            for (item in yaml.plugin_name.strings) {
               echo "Item: ${item}"
             }
             def output = ''
-            for (item in yaml.plugin_name) {
+            for (item in yaml.plugin_name.strings) {
               output += item + ','
             }
             // Remove the last comma from the output string
