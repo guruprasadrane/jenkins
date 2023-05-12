@@ -23,4 +23,3 @@ pipeline {
     // Other stages ...
   }
 }
-Copy
