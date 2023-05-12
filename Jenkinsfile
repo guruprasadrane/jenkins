@@ -13,7 +13,6 @@ pipeline {
             for (item in yaml.plugin_name.strings) {
               echo "Item: ${item}"
             }
-            def output = ''
             for (item in yaml.plugin_name.strings) {
               output += item + ','
             }
