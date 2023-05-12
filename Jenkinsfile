@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+    def output = ''
     stage('Read YAML') {
       steps {
         script {
