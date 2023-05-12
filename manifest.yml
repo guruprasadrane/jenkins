@@ -1,4 +1,2 @@
 name: steven
-plugin_name:
-  - hey
-  - hello
+plugin_name: ['string1', 'string2', 'string3', 'string4', 'string5', 'string6']
