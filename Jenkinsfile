@@ -1,5 +1,3 @@
-Sure, I can add steps to display the yaml content if the yaml file contains array of strings. Here is one possible example:
-
 pipeline {
   agent any
   stages {
