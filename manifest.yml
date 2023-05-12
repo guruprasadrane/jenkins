@@ -1,4 +1,3 @@
-hello:
-  plugin-name:
-    - hey
-    - hello
+plugin-name:
+  - hey
+  - hello

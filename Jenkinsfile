@@ -1,19 +1,28 @@
+Sure, I can add steps to display the yaml content if the yaml file contains array of strings. Here is one possible example:
+
 pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
+  agent any
+  stages {
+    stage('Read YAML') {
+      steps {
+        script {
+          // Read the yaml file from the workspace
+          def yaml = readYaml file: 'manifest.yml'
+          // Print some values from the yaml object
+          echo "Name: ${yaml.name}"
+          echo "Version: ${yaml.version}"
+          echo "Description: ${yaml.description}"
+          // Check if the yaml object has a key called 'items'
+          if (yaml.plugin-name) {
+            // Loop through the items array and print each element
+            for (item in yaml.plugin-name) {
+              echo "Item: ${item}"
             }
+          }
         }
-       stage('Read YAML file') {
-        steps {
-            script{ datas = readYaml (file: 'manifest.yml') }
-            echo datas.ear_file.deploy.toString()
-
-        }
+      }
     }
-    }
-
+    // Other stages ...
+  }
 }
+Copy
