@@ -11,7 +11,7 @@ pipeline {
           echo "Version: ${yaml.version}"
           echo "Description: ${yaml.description}"
           // Check if the yaml object has a key called 'items'
-          if (yaml.plugin-name) {
+          if (yaml.plugin_name) {
             // Loop through the items array and print each element
             for (item in yaml.plugin-name) {
               echo "Item: ${item}"
