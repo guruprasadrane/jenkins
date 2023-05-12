@@ -13,8 +13,8 @@ pipeline {
           // Check if the yaml object has a key called 'items'
           if (yaml.plugin_name) {
             // Loop through the items array and print each element
-            for (plugin-name in yaml.plugin-name) {
-              echo "Item: ${plugin-name}"
+            for (plugin_name in yaml.plugin_name) {
+              echo "Item: ${plugin_name}"
             }
           }
         }
