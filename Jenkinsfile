@@ -12,6 +12,14 @@ pipeline {
             for (item in yaml.plugin_name) {
               echo "Item: ${item}"
             }
+            def output = ''
+            for (item in yaml.items) {
+              output += item + ','
+            }
+            // Remove the last comma from the output string
+            output = output[0..-2]
+            // Print the output string
+            echo "Output: ${output}"
           }
         }
       }
