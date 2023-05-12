@@ -2,7 +2,6 @@ pipeline {
   agent any
   stages {
     stage('Read YAML') {
-      def output = ''
       steps {
         script {
           // Read the yaml file from the workspace
@@ -13,6 +12,7 @@ pipeline {
             for (item in yaml.plugin_name.strings) {
               echo "Item: ${item}"
             }
+            def output = ''
             for (item in yaml.plugin_name.strings) {
               output += item + ','
             }
