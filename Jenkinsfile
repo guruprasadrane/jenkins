@@ -13,7 +13,7 @@ pipeline {
               echo "Item: ${item}"
             }
             def output = ''
-            for (item in yaml.items) {
+            for (item in yaml.plugin_name) {
               output += item + ','
             }
             // Remove the last comma from the output string
