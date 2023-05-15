@@ -5,7 +5,7 @@ node {
   // Remove the substring from the string using .split()
   def fullpath = "env/alpha"
   def rootpath = "env/"
-  def result = fullpath.split(rootpath).join("")
+  def result = fullpath.split(rootpath)
 
   // Print the result
   echo result
